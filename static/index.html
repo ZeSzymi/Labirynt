@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.js"></script>
+    <script src="Net.js"></script>
+    <script src="player.js"></script>
+    <script src="player2.js"></script>
+    <script src="Main.js"></script>
+    <script src="elementysiatki.js"></script>
+    <script src="scianaduza.js"></script>
+    <script src="scianamala.js"></script>
+    <script src="scianasrednia.js"></script>
+    <script src="zegar.js"></script>
+    <script src="Ui.js"></script>
+    <script src="plansza.js"></script>
+
+    <script>
+            /*
+        inicjalizacja poszczególnych klas
+    */
+
+        var main
+        var net;
+        var ui;
+        var zegar
+        window.addEventListener("load", function () {
+                zegar = new Zegar();
+                ui = new Ui()
+                net = new Net();
+
+
+            })
+    </script>
+    <style>
+         .clocks {
+                width:150px;
+                height:150px;
+                position:relative;
+                z-index:10;
+            }
+			#licznik {
+				border: solid blue 1px;
+				width:50px;
+				height:20px;
+				text-align:center;
+			}
+            #cal{
+                position:absolute;
+                left:10px;
+                top:0px;
+                color:white;
+            }
+    </style>
+</head>
+
+
+<body>
+    <div id="div1">
+
+    </div>
+    <div id="cal">
+        <div class="clocks">
+            <canvas id="canvas" width="150" height="150"></canvas>
+        </div>
+    </div>
+</body>
+</html>
